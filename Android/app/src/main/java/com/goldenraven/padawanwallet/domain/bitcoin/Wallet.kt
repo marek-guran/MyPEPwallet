@@ -136,8 +136,8 @@ object Base58 {
         val ripemd160Hash = ripemd160(sha256Hash)
         Log.i(TAG, "RIPEMD-160 Hash: ${ripemd160Hash.joinToString(", ")}")
 
-        // Step 2: Add Pepecoin prefix (Ensure this is correct, e.g., 0x37 for 'P')
-        val addressPayload = byteArrayOf(0x37.toByte()) + ripemd160Hash
+        // Step 2: Add Pepecoin prefix (Ensure this is correct, e.g., 0x38 for 'P')
+        val addressPayload = byteArrayOf(0x38.toByte()) + ripemd160Hash
         Log.i(TAG, "Address Payload: ${addressPayload.joinToString(", ")}")
 
         // Step 3: Encode the result with Base58Check encoding (add checksum)
